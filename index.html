@@ -10,7 +10,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
 body{font-family:"Malgun Gothic","맑은 고딕","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;background:var(--bg);color:var(--ink);word-break:keep-all;-webkit-font-smoothing:antialiased}
-.page{height:100vh;display:grid;grid-template-columns:28% 1fr;gap:1.6vw;padding:2.4vh 2vw}
+.page{min-height:100vh;height:auto;display:grid;grid-template-columns:28% 1fr;gap:1.6vw;padding:2.4vh 2vw}
 aside{background:var(--panel,var(--soft));border-radius:22px;padding:4vh 2.2vw;display:flex;flex-direction:column;gap:2vh}
 .label{align-self:flex-start;font-size:clamp(12px,1.5vh,14px);font-weight:700;color:var(--accent);background:#fff;padding:.35em .9em;border-radius:99px}
 h1{font-size:clamp(26px,min(3.2vw,6vh),58px);line-height:1.2;letter-spacing:-.03em}
@@ -29,7 +29,7 @@ main{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:1.4vw;min-height:0}
 .card p{margin-top:1.6vh;font-size:clamp(15px,min(1.3vw,2.6vh),23px);color:var(--sub);line-height:1.55}
 .dl{margin-top:auto;display:flex;flex-direction:column;align-items:center;gap:.9vh;text-decoration:none;color:var(--sub);padding-top:2vh}
 .logo{width:clamp(80px,min(20vh,11vw),200px);aspect-ratio:1;border-radius:24%;background:#fff;border:1px solid var(--line);box-shadow:0 6px 18px rgba(30,60,60,.1);display:grid;place-items:center;overflow:hidden;transition:transform .15s}
-.logo img{width:70%;height:70%;object-fit:contain}
+.logo img,.logo svg{width:62%;height:62%;object-fit:contain;display:block}
 .logo img+.ph{display:none}
 .ph{font-weight:700;color:var(--accent);font-size:clamp(14px,min(1.4vw,2.4vh),22px)}
 .dl:hover .logo{transform:translateY(-3px)}
@@ -37,6 +37,7 @@ main{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:1.4vw;min-height:0}
 .card{border:1px solid #b8e0d8}
 .card.first{border-color:#9fd5ca}
 .card.first mark{background:linear-gradient(transparent 58%,#c4ebe3 58%);color:inherit;padding:0 .06em}
+.dl:focus-visible{outline:3px solid var(--accent);outline-offset:6px;border-radius:12px}
 @media (max-width:860px){
  .page{height:auto;grid-template-columns:1fr;padding:16px;gap:14px}
  aside{padding:22px}.info{margin-top:8px}
@@ -67,19 +68,26 @@ main{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:1.4vw;min-height:0}
    <span class="num">01</span>
    <h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg><span>클로드 계정<br><mark>1인 1개</mark> 지급</span></h2>
    <p>GPT 계정은 소수 인원이 보유하며 공용으로 사용합니다.</p>
-   <a class="dl" href="#" download aria-label="클로드 데스크톱 설치 파일 내려받기"><span class="logo"><!-- <img src="logo-claude.svg" alt="Claude"> --><span class="ph">Claude</span></span><span class="cap">데스크톱 버전 다운로드</span></a>
+   <a class="dl" href="https://downloads.claude.ai/claude-science/latest/windows-x64.exe" target="_blank" rel="noopener noreferrer" title="클로드 데스크톱 다운로드 페이지" aria-label="클로드 데스크톱 설치 파일 내려받기"><span class="logo"><svg aria-hidden="true" fill="#D97757" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Claude</title><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></svg></span><span class="cap">데스크톱 버전 다운로드</span></a>
   </section>
   <section class="card">
    <span class="num">02</span>
    <h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>구글 워크스페이스로<br>사내 프로젝트 관리</h2>
    <p>진행 중인 프로젝트는 워크스페이스에서 관리하고, 준공된 프로젝트는 사내 하드디스크에 보관합니다.</p>
-   <a class="dl" href="#" download aria-label="구글 드라이브 데스크톱 설치 파일 내려받기"><span class="logo"><!-- <img src="logo-drive.svg" alt="Google Drive"> --><span class="ph">Drive</span></span><span class="cap">데스크톱 버전 다운로드</span></a>
+   <a class="dl" href="https://dl.google.com/drive-file-stream/GoogleDriveSetup.exe" target="_blank" rel="noopener noreferrer" title="구글 드라이브 데스크톱 다운로드 페이지" aria-label="구글 드라이브 데스크톱 설치 파일 내려받기"><span class="logo"><svg aria-hidden="true" viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
+	<path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" fill="#0066da"/>
+	<path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z" fill="#00ac47"/>
+	<path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z" fill="#ea4335"/>
+	<path d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z" fill="#00832d"/>
+	<path d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" fill="#2684fc"/>
+	<path d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#ffba00"/>
+</svg></span><span class="cap">데스크톱 버전 다운로드</span></a>
   </section>
   <section class="card">
    <span class="num">03</span>
    <h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a2 2 0 0 1 2 2v14H7a2 2 0 0 1-2-2z"/><path d="M9 9h5M9 13h5"/></svg>노션에서<br>사내 연락처·공지 확인</h2>
    <p>연락처와 공지를 한곳에서 쉽게 찾을 수 있고, 휴대폰에서도 열립니다.</p>
-   <a class="dl" href="#" download aria-label="노션 데스크톱 설치 파일 내려받기"><span class="logo"><!-- <img src="logo-notion.svg" alt="Notion"> --><span class="ph">Notion</span></span><span class="cap">데스크톱 버전 다운로드</span></a>
+   <a class="dl" href="https://www.notion.com/desktop/windows/download" target="_blank" rel="noopener noreferrer" title="노션 데스크톱 다운로드 페이지" aria-label="노션 데스크톱 설치 파일 내려받기"><span class="logo"><svg aria-hidden="true" fill="#0b0b0b" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Notion</title><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></svg></span><span class="cap">데스크톱 버전 다운로드</span></a>
   </section>
  </main>
 </div>
