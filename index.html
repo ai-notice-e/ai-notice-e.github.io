@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>AI 업무 환경 도입 안내</title>
+<style>
+:root{--bg:#f4f7f7;--card:#fff;--ink:#1e2a2f;--sub:#56656b;--line:#e1e8e9;--accent:#239c8a;--soft:#e3f4f1}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:"Malgun Gothic","맑은 고딕","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;background:var(--bg);color:var(--ink);word-break:keep-all;-webkit-font-smoothing:antialiased}
+.page{height:100vh;display:grid;grid-template-columns:28% 1fr;gap:1.6vw;padding:2.4vh 2vw}
+aside{background:var(--panel,var(--soft));border-radius:22px;padding:4vh 2.2vw;display:flex;flex-direction:column;gap:2vh}
+.label{align-self:flex-start;font-size:clamp(12px,1.5vh,14px);font-weight:700;color:var(--accent);background:#fff;padding:.35em .9em;border-radius:99px}
+h1{font-size:clamp(26px,min(3.2vw,6vh),58px);line-height:1.2;letter-spacing:-.03em}
+.lead{font-size:clamp(15px,min(1.45vw,2.6vh),24px);color:var(--sub);line-height:1.55}
+.info{margin-top:auto;display:flex;flex-direction:column;gap:1.4vh;font-size:clamp(13px,min(1.1vw,2vh),18px);color:var(--sub);line-height:1.5}
+.info div{background:#fff;border-radius:12px;padding:1.2vh 1vw}
+.info b{display:block;color:var(--accent);font-size:.85em;margin-bottom:.2em}
+main{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:1.4vw;min-height:0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:0 4px 18px rgba(30,60,60,.06);padding:4vh 1.8vw 3vh;display:flex;flex-direction:column}
+.card.first{box-shadow:0 14px 40px rgba(30,60,60,.16);border-color:#d3e3e1}
+.card.first h2{font-size:clamp(22px,min(2.5vw,5vh),46px)}
+.card.first .logo{width:clamp(96px,min(24vh,13vw),240px)}
+.num{font-size:clamp(12px,1.6vh,15px);font-weight:700;color:var(--accent);letter-spacing:.1em}
+.card h2{margin-top:1.4vh;display:flex;flex-direction:column;gap:1.4vh;font-size:clamp(20px,min(2.1vw,4.2vh),38px);line-height:1.3;letter-spacing:-.025em}
+.ico{width:1.5em;height:1.5em;padding:.3em;border-radius:.4em;background:var(--soft);color:var(--accent)}
+.card p{margin-top:1.6vh;font-size:clamp(15px,min(1.3vw,2.6vh),23px);color:var(--sub);line-height:1.55}
+.dl{margin-top:auto;display:flex;flex-direction:column;align-items:center;gap:.9vh;text-decoration:none;color:var(--sub);padding-top:2vh}
+.logo{width:clamp(80px,min(20vh,11vw),200px);aspect-ratio:1;border-radius:24%;background:#fff;border:1px solid var(--line);box-shadow:0 6px 18px rgba(30,60,60,.1);display:grid;place-items:center;overflow:hidden;transition:transform .15s}
+.logo img{width:70%;height:70%;object-fit:contain}
+.logo img+.ph{display:none}
+.ph{font-weight:700;color:var(--accent);font-size:clamp(14px,min(1.4vw,2.4vh),22px)}
+.dl:hover .logo{transform:translateY(-3px)}
+.cap{font-size:clamp(12px,1.6vh,15px)}
+.card{border:1px solid #b8e0d8}
+.card.first{border-color:#9fd5ca}
+.card.first mark{background:linear-gradient(transparent 58%,#c4ebe3 58%);color:inherit;padding:0 .06em}
+@media (max-width:860px){
+ .page{height:auto;grid-template-columns:1fr;padding:16px;gap:14px}
+ aside{padding:22px}.info{margin-top:8px}
+ main{grid-template-columns:1fr;gap:14px}
+ .card{padding:22px}.dl{align-items:flex-start}.logo{width:80px}
+}
+@media print{
+ @page{size:A4 landscape;margin:8mm}
+ html,body{height:auto}body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .page{height:190mm;padding:0}.card,.logo{box-shadow:none}
+}
+</style>
+</head>
+<body>
+<div class="page">
+ <aside>
+  <span class="label">사내 공지 · AI 업무지원팀</span>
+  <h1>AI 업무 환경<br>도입 안내</h1>
+  <p class="lead">업무에 AI를 도입합니다. 오른쪽 세 가지 프로그램을 받아 설치해 주세요.</p>
+  <div class="info">
+   <div><b>일정</b>12월 시범 운영<br>2027년 1월 전 직원 정식 사용</div>
+   <div>도메인 이름과 계정 아이디 규칙은 다음 회의에서 정합니다.</div>
+   <div><b>문의</b>AI 업무지원팀 김태혁</div>
+  </div>
+ </aside>
+ <main>
+  <section class="card first">
+   <span class="num">01</span>
+   <h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg><span>클로드 계정<br><mark>1인 1개</mark> 지급</span></h2>
+   <p>GPT 계정은 소수 인원이 보유하며 공용으로 사용합니다.</p>
+   <a class="dl" href="#" download aria-label="클로드 데스크톱 설치 파일 내려받기"><span class="logo"><!-- <img src="logo-claude.svg" alt="Claude"> --><span class="ph">Claude</span></span><span class="cap">데스크톱 버전 다운로드</span></a>
+  </section>
+  <section class="card">
+   <span class="num">02</span>
+   <h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>구글 워크스페이스로<br>사내 프로젝트 관리</h2>
+   <p>진행 중인 프로젝트는 워크스페이스에서 관리하고, 준공된 프로젝트는 사내 하드디스크에 보관합니다.</p>
+   <a class="dl" href="#" download aria-label="구글 드라이브 데스크톱 설치 파일 내려받기"><span class="logo"><!-- <img src="logo-drive.svg" alt="Google Drive"> --><span class="ph">Drive</span></span><span class="cap">데스크톱 버전 다운로드</span></a>
+  </section>
+  <section class="card">
+   <span class="num">03</span>
+   <h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a2 2 0 0 1 2 2v14H7a2 2 0 0 1-2-2z"/><path d="M9 9h5M9 13h5"/></svg>노션에서<br>사내 연락처·공지 확인</h2>
+   <p>연락처와 공지를 한곳에서 쉽게 찾을 수 있고, 휴대폰에서도 열립니다.</p>
+   <a class="dl" href="#" download aria-label="노션 데스크톱 설치 파일 내려받기"><span class="logo"><!-- <img src="logo-notion.svg" alt="Notion"> --><span class="ph">Notion</span></span><span class="cap">데스크톱 버전 다운로드</span></a>
+  </section>
+ </main>
+</div>
+</body>
+</html>
