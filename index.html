@@ -5,91 +5,137 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>AI 업무 환경 도입 안내</title>
+<meta name="description" content="2027년 1월부터 전 직원 정식 사용 · 클로드 계정, 구글 워크스페이스, 노션 설치 안내">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="사내 공지">
+<meta property="og:title" content="AI 업무 환경 도입 안내">
+<meta property="og:description" content="2027년 1월부터 전 직원 정식 사용 · 클로드 계정, 구글 워크스페이스, 노션 설치 안내">
+<meta property="og:url" content="https://ai-notice-e.github.io/">
+<meta property="og:image" content="https://ai-notice-e.github.io/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="사내 공지 · 2027 AI 업무 환경 도입 안내">
+<meta name="twitter:card" content="summary_large_image">
 <style>
-:root{--bg:#f4f7f7;--card:#fff;--ink:#1e2a2f;--sub:#56656b;--line:#e1e8e9;--accent:#239c8a;--soft:#e3f4f1}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
-body{font-family:"Malgun Gothic","맑은 고딕","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;background:var(--bg);color:var(--ink);word-break:keep-all;-webkit-font-smoothing:antialiased}
-.page{min-height:100vh;height:auto;display:grid;grid-template-columns:28% 1fr;gap:1.6vw;padding:2.4vh 2vw}
-aside{background:var(--panel,var(--soft));border-radius:22px;padding:4vh 2.2vw;display:flex;flex-direction:column;gap:2vh}
-.label{align-self:flex-start;font-size:clamp(12px,1.5vh,14px);font-weight:700;color:var(--accent);background:#fff;padding:.35em .9em;border-radius:99px}
-h1{font-size:clamp(26px,min(3.2vw,6vh),58px);line-height:1.2;letter-spacing:-.03em}
-.lead{font-size:clamp(15px,min(1.45vw,2.6vh),24px);color:var(--sub);line-height:1.55}
-.info{margin-top:auto;display:flex;flex-direction:column;gap:1.4vh;font-size:clamp(13px,min(1.1vw,2vh),18px);color:var(--sub);line-height:1.5}
-.info div{background:#fff;border-radius:12px;padding:1.2vh 1vw}
-.info b{display:block;color:var(--accent);font-size:.85em;margin-bottom:.2em}
-main{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:1.4vw;min-height:0}
-.card{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:0 4px 18px rgba(30,60,60,.06);padding:4vh 1.8vw 3vh;display:flex;flex-direction:column}
-.card.first{box-shadow:0 14px 40px rgba(30,60,60,.16);border-color:#d3e3e1}
-.card.first h2{font-size:clamp(22px,min(2.5vw,5vh),46px)}
-.card.first .logo{width:clamp(96px,min(24vh,13vw),240px)}
-.num{font-size:clamp(12px,1.6vh,15px);font-weight:700;color:var(--accent);letter-spacing:.1em}
-.card h2{margin-top:1.4vh;display:flex;flex-direction:column;gap:1.4vh;font-size:clamp(20px,min(2.1vw,4.2vh),38px);line-height:1.3;letter-spacing:-.025em}
-.ico{width:1.5em;height:1.5em;padding:.3em;border-radius:.4em;background:var(--soft);color:var(--accent)}
-.card p{margin-top:1.6vh;font-size:clamp(15px,min(1.3vw,2.6vh),23px);color:var(--sub);line-height:1.55}
-.dl{margin-top:auto;display:flex;flex-direction:column;align-items:center;gap:.9vh;text-decoration:none;color:var(--sub);padding-top:2vh}
-.logo{width:clamp(80px,min(20vh,11vw),200px);aspect-ratio:1;border-radius:24%;background:#fff;border:1px solid var(--line);box-shadow:0 6px 18px rgba(30,60,60,.1);display:grid;place-items:center;overflow:hidden;transition:transform .15s}
-.logo img,.logo svg{width:62%;height:62%;object-fit:contain;display:block}
-.logo img+.ph{display:none}
-.ph{font-weight:700;color:var(--accent);font-size:clamp(14px,min(1.4vw,2.4vh),22px)}
-.dl:hover .logo{transform:translateY(-3px)}
-.cap{font-size:clamp(12px,1.6vh,15px)}
-.card{border:1px solid #b8e0d8}
-.card.first{border-color:#9fd5ca}
-.card.first mark{background:linear-gradient(transparent 58%,#c4ebe3 58%);color:inherit;padding:0 .06em}
-.dl:focus-visible{outline:3px solid var(--accent);outline-offset:6px;border-radius:12px}
-@media (max-width:860px){
- .page{height:auto;grid-template-columns:1fr;padding:16px;gap:14px}
- aside{padding:22px}.info{margin-top:8px}
- main{grid-template-columns:1fr;gap:14px}
- .card{padding:22px}.dl{align-items:flex-start}.logo{width:80px}
-}
-@media print{
- @page{size:A4 landscape;margin:8mm}
- html,body{height:auto}body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
- .page{height:190mm;padding:0}.card,.logo{box-shadow:none}
-}
+body{font-family:"Malgun Gothic","맑은 고딕","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;color:#1b2b2e;background:#eef6f5;word-break:keep-all;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.logo svg{width:62%;height:62%;display:block}
+.dl:focus-visible,.chip:focus-visible{outline:3px solid #239c8a;outline-offset:5px;border-radius:14px}
+mark{background:linear-gradient(transparent 58%,#bfeade 58%);color:inherit}
+body::before{content:"";position:fixed;inset:-25%;z-index:-2;background:radial-gradient(circle at 20% 30%,#93e3d1 0,transparent 32%),radial-gradient(circle at 78% 22%,#a7d3ff 0,transparent 30%),radial-gradient(circle at 62% 82%,#c4f1e4 0,transparent 34%),radial-gradient(circle at 35% 75%,#d9ecff 0,transparent 30%),#eef6f5;filter:blur(30px);will-change:transform;animation:mesh 16s ease-in-out infinite alternate}
+@keyframes mesh{0%{transform:translate(0,0) rotate(0) scale(1)}100%{transform:translate(5%,-4%) rotate(10deg) scale(1.12)}}
+.glass{background:rgba(255,255,255,.55);-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);border:1px solid rgba(255,255,255,.8);box-shadow:0 12px 40px rgba(30,80,90,.12)}
+
+body{font-family:"Pretendard Variable","Pretendard","SUIT Variable","SUIT","Malgun Gothic","맑은 고딕","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif}
+.page{height:100vh;display:grid;grid-template-rows:auto 1fr;gap:1vh;padding:3.6vh 4vw 3.4vh}
+header{display:flex;flex-direction:column;gap:1.4vh}
+.top{display:flex;justify-content:space-between;align-items:center;gap:2vw;animation:up .8s cubic-bezier(.2,.8,.2,1) backwards}
+header .label{font-size:clamp(12px,1.6vh,15px);font-weight:700;letter-spacing:.02em;color:#1d8a7a;background:rgba(255,255,255,.7);padding:.45em 1.1em;border-radius:99px}
+.contact{display:flex;align-items:center;gap:.8vw;font-size:clamp(12px,1.85vh,17px);color:#46595e}
+.contact b{color:#1b2b2e;font-weight:800;margin-left:.3em}
+.tags{display:flex;gap:.4vw}
+.tags span{padding:.35em .9em;border-radius:99px;background:rgba(255,255,255,.75);border:1px solid rgba(31,154,136,.25);color:#1d8a7a;font-weight:700}
+.hero{display:flex;align-items:flex-end;gap:3.2vw}
+.yn{position:relative;font-family:"Segoe UI Variable Display","Segoe UI","Pretendard Variable","Pretendard",system-ui,sans-serif;font-size:clamp(84px,min(19.5vw,31vh),380px);font-weight:800;line-height:.78;letter-spacing:-.055em;margin-left:-.04em;background:linear-gradient(110deg,#168f7e 0%,#3cc2a8 30%,#8fd8ff 50%,#3cc2a8 70%,#168f7e 100%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:up .9s cubic-bezier(.2,.8,.2,1) .1s backwards,shine 7s ease-in-out 1.2s infinite}
+.yn::after{content:attr(data-t);position:absolute;left:.05em;top:.05em;z-index:-1;color:transparent;-webkit-text-stroke:2px rgba(31,154,136,.22);background:none}
+@keyframes shine{0%,100%{background-position:100% 0}50%{background-position:0 0}}
+.copy{padding-bottom:.4vh;animation:up .9s cubic-bezier(.2,.8,.2,1) .25s backwards}
+h1{font-size:clamp(26px,min(4.1vw,7.6vh),86px);line-height:1.08;letter-spacing:-.045em;font-weight:800}
+h1 span{color:#1f9a88}
+.tagline{display:flex;align-items:center;gap:.7em;margin-top:1.6vh;font-size:clamp(14px,min(1.45vw,2.6vh),26px);font-weight:700;color:#2b3d41;letter-spacing:-.02em}
+.tagline::before{content:"";width:2.4em;height:3px;border-radius:3px;background:linear-gradient(90deg,#1f9a88,#8fd8ff)}
+.tagline b{color:#1f9a88}
+@keyframes up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.cards{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:1.6vw;align-items:end;min-height:0;padding-top:9vh}
+.card{position:relative;display:flex;flex-direction:column;border-radius:28px;padding:11vh 1.8vw 2.4vh;height:100%;max-height:52vh;animation:rise .9s cubic-bezier(.2,.8,.2,1) backwards;transition:transform .3s}
+.card:nth-child(1){animation-delay:.25s}.card:nth-child(2){animation-delay:.4s}.card:nth-child(3){animation-delay:.55s}
+.card:hover{transform:translateY(-6px)}
+.card.first{background:rgba(255,255,255,.72);box-shadow:0 22px 60px rgba(30,110,100,.22)}
+@keyframes rise{from{opacity:0;transform:translateY(60px)}to{opacity:1;transform:none}}
+.obj{position:absolute;left:1.2vw;top:-9vh;width:min(19vh,10vw);filter:drop-shadow(0 16px 20px rgba(30,90,90,.18));animation:pop .7s cubic-bezier(.3,1.5,.5,1) backwards,float 4.5s ease-in-out infinite}
+.card.first .obj{width:min(24vh,12.5vw);top:-11vh}
+.card:nth-child(1) .obj{animation-delay:.8s,1.5s}.card:nth-child(2) .obj{animation-delay:.95s,0s}.card:nth-child(3) .obj{animation-delay:1.1s,-2s}
+@keyframes pop{from{opacity:0;transform:scale(.4) rotate(-12deg)}to{opacity:1;transform:none}}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -8px}}
+.num{position:absolute;right:1.6vw;top:2vh;font-size:clamp(28px,6vh,64px);font-weight:900;color:rgba(31,154,136,.16);line-height:1}
+.card h2{font-size:clamp(18px,min(1.85vw,3.5vh),36px);line-height:1.28;letter-spacing:-.03em}
+.card.first h2{font-size:clamp(21px,min(2.3vw,4.3vh),44px)}
+.card p{margin-top:1.1vh;font-size:clamp(13px,min(1.15vw,2.2vh),20px);color:#4b5e62;line-height:1.55}
+.dl{margin-top:auto;padding-top:1.6vh;align-self:flex-end;display:flex;flex-direction:row-reverse;align-items:center;gap:1vw;text-decoration:none;text-align:right}
+.logo{flex:none;width:clamp(76px,min(14vh,8vw),160px);aspect-ratio:1;border-radius:24%;background:#fff;display:grid;place-items:center;box-shadow:0 10px 26px rgba(30,60,60,.14);transition:transform .2s}
+.card.first .logo{width:clamp(88px,min(17vh,9.6vw),190px)}
+.dl:hover .logo{transform:scale(1.07) rotate(-4deg)}
+.cap{font-size:clamp(13px,1.8vh,17px);font-weight:800;color:#1d8a7a}
+.cap i{font-style:normal;display:inline-block;margin-left:.35em;transition:transform .25s}
+.dl:hover .cap i{transform:translateX(5px)}
+.logo{position:relative;border:3px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(135deg,#5fd0b8,#9cc8ff) border-box;animation:ring 3.2s ease-in-out infinite}
+.logo::after{content:"\2193";position:absolute;right:-8%;bottom:-8%;width:30%;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#2bb39d,#5aa8f0);color:#fff;font-weight:900;font-size:clamp(11px,1.5vh,18px);box-shadow:0 4px 10px rgba(30,120,110,.3);border:2px solid #fff}
+@keyframes ring{0%,100%{box-shadow:0 10px 26px rgba(30,60,60,.14),0 0 0 0 rgba(63,190,165,.35)}50%{box-shadow:0 10px 26px rgba(30,60,60,.14),0 0 0 9px rgba(63,190,165,0)}}
+.dl:hover .logo{border-width:4px;box-shadow:0 14px 32px rgba(30,120,110,.25),0 0 22px rgba(95,208,184,.55)}
+@media (max-width:860px){.page{height:auto;padding:24px 16px}.top{flex-direction:column;align-items:flex-start;gap:10px}.contact{flex-wrap:wrap;gap:8px}.tags{gap:6px}.hero{flex-direction:column;align-items:flex-start;gap:14px;margin-top:6px}.yn{font-size:112px}h1{font-size:34px}.cards{grid-template-columns:1fr;gap:70px;padding-top:70px}.card{max-height:none;padding:80px 20px 20px}.obj,.card.first .obj{width:120px;top:-60px}.logo,.card.first .logo{width:84px}.dl{gap:12px}}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+@media print{body::before{display:none}.glass{background:#fff!important}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+/* ---- 색감 덮어쓰기 ---- */
+body{background:#fdf5f0;color:#1b2b2e}
+body::before{background:radial-gradient(circle at 20% 30%,#ffc9b8 0,transparent 32%),radial-gradient(circle at 78% 22%,#ffe1b0 0,transparent 30%),radial-gradient(circle at 62% 82%,#ffd6e0 0,transparent 34%),radial-gradient(circle at 35% 75%,#fff0d6 0,transparent 30%),#fdf5f0}
+header .label{color:#c24a34;background:rgba(255,255,255,.75)}
+.contact{color:#46595e}.contact b{color:#1b2b2e}
+.tags span{background:rgba(255,255,255,.75);border-color:color-mix(in srgb,#e0573f 30%,transparent);color:#c24a34}
+.yn{background-image:linear-gradient(110deg,#d63d3d 0%,#f07a4a 30%,#ffc46b 50%,#f07a4a 70%,#d63d3d 100%)}
+.yn::after{-webkit-text-stroke-color:color-mix(in srgb,#e0573f 24%,transparent)}
+h1{color:#1b2b2e}h1 span,.tagline b{color:#e0573f}.tagline{color:#1b2b2e}
+.tagline::before{background:linear-gradient(90deg,#d63d3d,#ffc46b)}
+.num{color:color-mix(in srgb,#e0573f 18%,transparent)}
+.card p{color:#46595e}.cap{color:#c24a34}
+mark{background:linear-gradient(transparent 58%,#ffd8c8 58%)}
+.logo{background:linear-gradient(#fff,#fff) padding-box,linear-gradient(135deg,#f07a4a,#ffc46b) border-box;animation-name:ringC}
+.logo::after{background:linear-gradient(135deg,#d63d3d,#ffc46b)}
+@keyframes ringC{0%,100%{box-shadow:0 10px 26px rgba(30,40,60,.14),0 0 0 0 color-mix(in srgb,#e0573f 40%,transparent)}50%{box-shadow:0 10px 26px rgba(30,40,60,.14),0 0 0 9px color-mix(in srgb,#e0573f 0%,transparent)}}
+.dl:hover .logo{box-shadow:0 14px 32px rgba(30,40,60,.25),0 0 22px color-mix(in srgb,#e0573f 55%,transparent)}
+.obj{filter:hue-rotate(-155deg) saturate(.9) drop-shadow(0 16px 20px rgba(30,40,70,.18))}
+.dl:focus-visible{outline-color:#e0573f}
+
+/* ---- 코랄 확정본 보완 ---- */
+.card{border:1.5px solid rgba(224,87,63,.38)!important}
+.card.first{border:2px solid rgba(224,87,63,.6)!important}
+.num{color:#e0573f!important;opacity:.92;font-weight:900;text-shadow:0 2px 0 rgba(255,255,255,.7)}
+.dl .logo{transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .35s,border-width .2s}
+.dl:hover .logo{transform:translateY(-8px) scale(1.07)!important}
+.dl:active .logo{transform:translateY(-3px) scale(.97)!important;transition-duration:.12s}
+.logo::after{transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+.dl:hover .logo::after{transform:translateY(4px);animation:nudge .9s ease-in-out .35s infinite}
+@keyframes nudge{0%,100%{transform:translateY(4px)}50%{transform:translateY(9px)}}
+.ywrap{position:relative;display:block;flex:none;isolation:isolate;font-size:clamp(84px,min(19.5vw,31vh),380px)}.ywrap .yn{display:block;z-index:2}.yn::after{display:none!important}
+.ghost{position:absolute;left:.01em;top:.05em;z-index:0;font-family:"Segoe UI Variable Display","Segoe UI","Pretendard Variable","Pretendard",system-ui,sans-serif;font-size:1em;font-weight:800;line-height:.78;letter-spacing:-.055em;color:transparent;-webkit-text-stroke:2px color-mix(in srgb,#e0573f 26%,transparent);pointer-events:none;animation:up .9s cubic-bezier(.2,.8,.2,1) .1s backwards}
+.sheep{position:absolute;z-index:1;left:.616em;top:-.185em;width:.36em;filter:drop-shadow(0 10px 14px rgba(160,70,50,.16));animation:peek .9s cubic-bezier(.3,1.4,.5,1) 1s backwards,bob 4.2s ease-in-out 2s infinite;transform-origin:50% 100%;pointer-events:none}
+.sheep.s2{left:1.68em;top:-.166em;width:.34em;animation:peek .9s cubic-bezier(.3,1.4,.5,1) 1.3s backwards,doze 3.6s ease-in-out 2.4s infinite}
+.sheep.s3{left:1.926em;top:.375em;width:.32em;transform:rotate(20deg) scaleX(-1);transform-origin:50% 50%;animation:side .9s cubic-bezier(.3,1.4,.5,1) 1.6s backwards,sidepeek 5s ease-in-out 3s infinite}
+.grip{position:absolute;z-index:3;height:.032em;border-radius:50%;background:radial-gradient(ellipse at 50% 40%,rgba(130,35,15,.42),rgba(130,35,15,0) 70%);pointer-events:none;animation:up .9s cubic-bezier(.2,.8,.2,1) 1s backwards}
+.grip.g1{left:.69em;top:.104em;width:.075em}.grip.g2{left:.834em;top:.096em;width:.075em}.grip.g3{left:1.78em;top:.101em;width:.15em}
+.hoof{position:absolute;z-index:4;width:.056em;height:.046em;border-radius:50% 50% 44% 44%/58% 58% 42% 42%;background:radial-gradient(circle at 38% 28%,#ffd3c3 0,#f6a088 45%,#e9785e 100%);box-shadow:0 .005em .007em rgba(140,40,20,.35),inset 0 -.005em .006em rgba(190,70,45,.35);pointer-events:none;animation:up .9s cubic-bezier(.2,.8,.2,1) 1s backwards}
+.hoof.h1{left:.6965em;top:.086em;rotate:-10deg}.hoof.h2{left:.8425em;top:.078em;rotate:8deg}.hoof.h3{left:1.7925em;top:.083em}.hoof.h4{left:1.8595em;top:.083em}
+@keyframes sidepeek{0%,100%{translate:0 0}45%,55%{translate:-12% 0}}
+@keyframes doze{0%,100%{translate:0 0}50%{translate:0 3%}}
+@keyframes side{from{translate:-40% 0;opacity:0}to{translate:0 0;opacity:1}}
+@keyframes peek{from{translate:0 40%;opacity:0}to{translate:0 0;opacity:1}}
+@keyframes bob{0%,100%{rotate:0deg}30%{rotate:-3deg}60%{rotate:2deg}}
+.card:nth-child(2) .obj{filter:drop-shadow(0 16px 20px rgba(60,90,140,.2)) saturate(1.15);width:min(25vh,13vw);top:-12vh;left:.6vw}
+.tagline::before{flex:none}
+.card.first .obj{filter:drop-shadow(0 16px 20px rgba(160,70,50,.18))}
+@media (max-width:860px){.hero{margin-top:44px!important}.ywrap{font-size:112px}.card:nth-child(2) .obj{width:140px}}
 </style>
 </head>
 <body>
-<div class="page">
- <aside>
-  <span class="label">사내 공지 · AI 업무지원팀</span>
-  <h1>AI 업무 환경<br>도입 안내</h1>
-  <p class="lead">업무에 AI를 도입합니다. 오른쪽 세 가지 프로그램을 받아 설치해 주세요.</p>
-  <div class="info">
-   <div><b>일정</b>12월 시범 운영<br>2027년 1월 전 직원 정식 사용</div>
-   <div>도메인 이름과 계정 아이디 규칙은 다음 회의에서 정합니다.</div>
-   <div><b>문의</b>AI 업무지원팀 김태혁</div>
-  </div>
- </aside>
- <main>
-  <section class="card first">
-   <span class="num">01</span>
-   <h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg><span>클로드 계정<br><mark>1인 1개</mark> 지급</span></h2>
-   <p>GPT 계정은 소수 인원이 보유하며 공용으로 사용합니다.</p>
-   <a class="dl" href="https://downloads.claude.ai/claude-science/latest/windows-x64.exe" target="_blank" rel="noopener noreferrer" title="클로드 데스크톱 다운로드 페이지" aria-label="클로드 데스크톱 설치 파일 내려받기"><span class="logo"><svg aria-hidden="true" fill="#D97757" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Claude</title><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></svg></span><span class="cap">데스크톱 버전 다운로드</span></a>
-  </section>
-  <section class="card">
-   <span class="num">02</span>
-   <h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>구글 워크스페이스로<br>사내 프로젝트 관리</h2>
-   <p>진행 중인 프로젝트는 워크스페이스에서 관리하고, 준공된 프로젝트는 사내 하드디스크에 보관합니다.</p>
-   <a class="dl" href="https://dl.google.com/drive-file-stream/GoogleDriveSetup.exe" target="_blank" rel="noopener noreferrer" title="구글 드라이브 데스크톱 다운로드 페이지" aria-label="구글 드라이브 데스크톱 설치 파일 내려받기"><span class="logo"><svg aria-hidden="true" viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
+<div class="page"><header><div class="top"><span class="label">사내 공지</span><div class="contact"><span>문의<b>AI 업무지원팀</b></span><span class="tags"><span>안미경</span><span>김태혁</span><span>이재성</span></span></div></div><div class="hero"><span class="ywrap"><span class="ghost" aria-hidden="true">2027</span><b class="yn" data-t="2027" aria-label="2027년">2027</b><img class="sheep" src="img/obj-sheep-peek.png" alt="" aria-hidden="true"><img class="sheep s2" src="img/obj-sheep-sleep.png" alt="" aria-hidden="true"><i class="grip g1"></i><i class="grip g2"></i><i class="grip g3"></i><i class="hoof h1"></i><i class="hoof h2"></i><i class="hoof h3"></i><i class="hoof h4"></i><img class="sheep s3" src="img/obj-sheep-side.png" alt="" aria-hidden="true"></span><div class="copy"><h1>AI 업무 환경<br><span>도입 안내</span></h1><p class="tagline"><span><b>1월부터</b> 전 직원 정식 사용</span></p></div></div></header><main class="cards"><section class="card glass first"><img class="obj" src="img/r1-pixel-bot.png" alt="" aria-hidden="true"><span class="num">01</span><h2>클로드 계정<br><mark>1인 1개</mark> 지급</h2><p>GPT 계정은 소수 인원이 보유하며 공용으로 사용합니다.</p><a class="dl" href="https://downloads.claude.ai/claude-science/latest/windows-x64.exe" target="_blank" rel="noopener noreferrer" aria-label="클로드 데스크톱 설치 파일 내려받기"><span class="logo"><svg aria-hidden="true" fill="#D97757" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Claude</title><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></svg></span><span class="cap">PC에 설치하기<i aria-hidden="true">→</i></span></a></section><section class="card glass"><img class="obj" src="img/obj-cloud-folder.png" alt="" aria-hidden="true"><span class="num">02</span><h2>구글 워크스페이스로<br>사내 프로젝트 관리</h2><p>진행 중인 프로젝트는 워크스페이스에서 관리하고, 준공된 프로젝트는 사내 하드디스크에 보관합니다.</p><a class="dl" href="https://dl.google.com/drive-file-stream/GoogleDriveSetup.exe" target="_blank" rel="noopener noreferrer" aria-label="구글 드라이브 데스크톱 설치 파일 내려받기"><span class="logo"><svg aria-hidden="true" viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
 	<path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" fill="#0066da"/>
 	<path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z" fill="#00ac47"/>
 	<path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z" fill="#ea4335"/>
 	<path d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z" fill="#00832d"/>
 	<path d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" fill="#2684fc"/>
 	<path d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#ffba00"/>
-</svg></span><span class="cap">데스크톱 버전 다운로드</span></a>
-  </section>
-  <section class="card">
-   <span class="num">03</span>
-   <h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a2 2 0 0 1 2 2v14H7a2 2 0 0 1-2-2z"/><path d="M9 9h5M9 13h5"/></svg>노션에서<br>사내 연락처·공지 확인</h2>
-   <p>연락처와 공지를 한곳에서 쉽게 찾을 수 있고, 휴대폰에서도 열립니다.</p>
-   <a class="dl" href="https://www.notion.com/desktop/windows/download" target="_blank" rel="noopener noreferrer" title="노션 데스크톱 다운로드 페이지" aria-label="노션 데스크톱 설치 파일 내려받기"><span class="logo"><svg aria-hidden="true" fill="#0b0b0b" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Notion</title><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></svg></span><span class="cap">데스크톱 버전 다운로드</span></a>
-  </section>
- </main>
-</div>
+</svg></span><span class="cap">PC에 설치하기<i aria-hidden="true">→</i></span></a></section><section class="card glass"><img class="obj" src="img/obj-note.png" alt="" aria-hidden="true"><span class="num">03</span><h2>노션에서<br>사내 연락처·공지 확인</h2><p>연락처와 공지를 한곳에서 쉽게 찾을 수 있고, 휴대폰에서도 열립니다.</p><a class="dl" href="https://www.notion.com/desktop/windows/download" target="_blank" rel="noopener noreferrer" aria-label="노션 데스크톱 설치 파일 내려받기"><span class="logo"><svg aria-hidden="true" fill="#0b0b0b" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Notion</title><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></svg></span><span class="cap">PC에 설치하기<i aria-hidden="true">→</i></span></a></section></main></div>
 </body>
 </html>
